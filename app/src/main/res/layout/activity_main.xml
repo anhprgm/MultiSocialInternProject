@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <include layout="@layout/toolbar"
+        android:id="@+id/toolbar"/>
+    <FrameLayout
+        android:id="@+id/fl_wrapper"
+        android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </FrameLayout>
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="?android:attr/windowBackground"
+        app:itemTextColor="#000000"
+        app:itemRippleColor="@color/black"
+        app:itemIconSize="30dp"
+        android:visibility="visible"
+        android:id="@+id/bottom_navigation"
+        app:menu="@menu/nav_menu"/>
+    <ImageView
+        android:id="@+id/menu_action"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:background="@drawable/background_menu_expand"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="10dp"
+        android:visibility="gone"
+        android:layout_marginBottom="20dp"
+        android:contentDescription="hihi" />
+
+</RelativeLayout>

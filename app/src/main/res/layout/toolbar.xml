@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#FFFFFF">
+    <LinearLayout
+        android:gravity="start|center"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/return_btn"
+            android:background="@drawable/arrow_left_svgrepo_com"
+            android:layout_width="45dp"
+            android:layout_height="45dp"/>
+        <EditText
+            android:gravity="center"
+            android:id="@+id/Link"
+            android:layout_marginStart="20dp"
+            android:text="aloaloaloa"
+            android:background="@android:color/transparent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <ImageView
+            android:id="@+id/expanded_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+</LinearLayout>
