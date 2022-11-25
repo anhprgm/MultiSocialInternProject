@@ -4,42 +4,164 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".fragments.HomeFragment">
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <TableLayout
-        android:layout_width="match_parent"
-        android:clipToPadding="true"
+    <LinearLayout
         android:gravity="center"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
         android:layout_height="match_parent">
-
-        <TableRow
+        <TableLayout
             android:gravity="center"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-            <ImageView
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:layout_marginEnd="10dp"
-                android:src="@drawable/facebook" />
+            <TableRow
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:id="@+id/facebook"
+                    android:layout_width="70dp"
+                    android:orientation="vertical"
+                    android:layout_height="70dp"
+                    android:gravity="top|center"
+                    android:layout_marginEnd="10dp">
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/facebook"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:text="Facebook"
+                        android:textSize="11sp"
+                        android:textColor="@color/black"/>
+                </LinearLayout>
 
-            <ImageView
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:layout_marginEnd="10dp"
-                android:src="@drawable/instagram" />
+                <LinearLayout
+                    android:id="@+id/instagram"
+                    android:layout_width="70dp"
+                    android:orientation="vertical"
+                    android:layout_height="70dp"
+                    android:gravity="top|center"
+                    android:layout_marginEnd="10dp">
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/instagram"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:text="Instagram"
+                        android:textSize="11sp"
+                        android:textColor="@color/black"/>
+                </LinearLayout>
 
-            <ImageView
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:layout_marginEnd="10dp"
-                android:src="@drawable/youtube" />
+                <LinearLayout
+                    android:id="@+id/youtube"
+                    android:layout_width="70dp"
+                    android:orientation="vertical"
+                    android:layout_height="70dp"
+                    android:gravity="top|center"
+                    android:layout_marginEnd="10dp">
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/youtube"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:text="Youtube"
+                        android:textSize="11sp"
+                        android:textColor="@color/black"/>
+                </LinearLayout>
 
-            <ImageView
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:src="@drawable/tiktok" />
-        </TableRow>
-    </TableLayout>
-</LinearLayout>
+                <LinearLayout
+                    android:id="@+id/tiktok"
+                    android:layout_width="70dp"
+                    android:orientation="vertical"
+                    android:layout_height="70dp"
+                    android:gravity="top|center"
+                    android:layout_marginEnd="10dp">
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/tiktok"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:text="Tiktok"
+                        android:textSize="11sp"
+                        android:textColor="@color/black"/>
+                </LinearLayout>
+            </TableRow>
+            <TableRow
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:id="@+id/telegram"
+                    android:layout_width="70dp"
+                    android:orientation="vertical"
+                    android:layout_height="70dp"
+                    android:gravity="top|center"
+                    android:layout_marginEnd="10dp">
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/telegram"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:text="Telegram"
+                        android:textSize="11sp"
+                        android:textColor="@color/black"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/twitter"
+                    android:layout_width="70dp"
+                    android:orientation="vertical"
+                    android:layout_height="70dp"
+                    android:gravity="top|center"
+                    android:layout_marginEnd="10dp">
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/twitter"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:text="Twitter"
+                        android:textSize="11sp"
+                        android:textColor="@color/black"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/pinterest"
+                    android:layout_width="70dp"
+                    android:orientation="vertical"
+                    android:layout_height="70dp"
+                    android:gravity="top|center"
+                    android:layout_marginEnd="10dp">
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/pinterest"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:text="Pinterest"
+                        android:textSize="11sp"
+                        android:textColor="@color/black"/>
+                </LinearLayout>
+            </TableRow>
+        </TableLayout>
+    </LinearLayout>
 </FrameLayout>

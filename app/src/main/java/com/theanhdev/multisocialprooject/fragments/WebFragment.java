@@ -1,30 +1,27 @@
 package com.theanhdev.multisocialprooject.fragments;
 
-import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
+import android.webkit.WebSettings;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
 import android.widget.Toolbar;
 
-import com.theanhdev.multisocialprooject.MainActivity;
 import com.theanhdev.multisocialprooject.R;
 import com.theanhdev.multisocialprooject.WebActivity;
 
-import java.util.Objects;
-
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link HomeFragment#newInstance} factory method to
+ * Use the {@link WebFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class HomeFragment extends Fragment {
+public class WebFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -35,7 +32,7 @@ public class HomeFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public HomeFragment() {
+    public WebFragment() {
         // Required empty public constructor
     }
 
@@ -45,11 +42,11 @@ public class HomeFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment HomeFragment.
+     * @return A new instance of fragment WebFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static HomeFragment newInstance(String param1, String param2) {
-        HomeFragment fragment = new HomeFragment();
+    public static WebFragment newInstance(String param1, String param2) {
+        WebFragment fragment = new WebFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -64,38 +61,29 @@ public class HomeFragment extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
-
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_home, container, false);
-        LinearLayout Facebook = view.findViewById(R.id.facebook);
-        LinearLayout Youtube = view.findViewById(R.id.youtube);
-        LinearLayout Telegram = view.findViewById(R.id.telegram);
-        LinearLayout Tiktok = view.findViewById(R.id.tiktok);
-        Facebook.setOnClickListener(v -> {
-            Intent intent = new Intent(getActivity(), WebActivity.class);
-            intent.putExtra("type", "facebook");
-            startActivity(intent);
-        });
-        Youtube.setOnClickListener(v -> {
-            Intent intent = new Intent(getActivity(), WebActivity.class);
-            intent.putExtra("type", "youtube");
-            startActivity(intent);
-        });
-        Telegram.setOnClickListener(v -> {
-            Intent intent = new Intent(getActivity(), WebActivity.class);
-            intent.putExtra("type", "telegram");
-            startActivity(intent);
-        });
-        Tiktok.setOnClickListener(v -> {
-            Intent intent = new Intent(getActivity(), WebActivity.class);
-            intent.putExtra("type", "tiktok");
-            startActivity(intent);
+        // Inflate the layout for this fragment
+        View view = inflater.inflate(R.layout.fragment_web, container, false);
+        WebView webView = view.findViewById(R.id.webView);
+        webView.getSettings().setJavaScriptEnabled(true);
+        webView.setWebViewClient(new WebViewClient());
+        webView.loadUrl("https://www.facebook.com/");
+        webView.setOnKeyListener((v, keyCode, event) -> {
+            if (event.getAction() == KeyEvent.ACTION_DOWN) {
+                WebView webView2 = (WebView) v;
+                if (keyCode == KeyEvent.KEYCODE_BACK) {
+                    if (webView.canGoBack()) {
+                        webView.goBack();
+                        return true;
+                    }
+                }
+            }
+            return false;
         });
         return view;
     }
-
 }

@@ -13,13 +13,15 @@
             android:background="@drawable/arrow_left_svgrepo_com"
             android:layout_width="45dp"
             android:layout_height="45dp"/>
-        <EditText
-            android:gravity="center"
+        <TextView
+            android:gravity="start"
             android:id="@+id/Link"
             android:layout_marginStart="20dp"
-            android:text="aloaloaloa"
+            android:textColor="#FF71A1"
+            android:maxLines="1"
+            android:textSize="15sp"
             android:background="@android:color/transparent"
-            android:layout_width="wrap_content"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"/>
         <ImageView
             android:id="@+id/expanded_menu"
