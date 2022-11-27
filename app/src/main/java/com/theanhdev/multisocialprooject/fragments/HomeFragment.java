@@ -75,6 +75,7 @@ public class HomeFragment extends Fragment {
         LinearLayout Youtube = view.findViewById(R.id.youtube);
         LinearLayout Telegram = view.findViewById(R.id.telegram);
         LinearLayout Tiktok = view.findViewById(R.id.tiktok);
+        LinearLayout Insta = view.findViewById(R.id.instagram);
         Facebook.setOnClickListener(v -> {
             Intent intent = new Intent(getActivity(), WebActivity.class);
             intent.putExtra("type", "facebook");
@@ -93,6 +94,11 @@ public class HomeFragment extends Fragment {
         Tiktok.setOnClickListener(v -> {
             Intent intent = new Intent(getActivity(), WebActivity.class);
             intent.putExtra("type", "tiktok");
+            startActivity(intent);
+        });
+        Insta.setOnClickListener(v -> {
+            Intent intent = new Intent(getActivity(), WebActivity.class);
+            intent.putExtra("type", "insta");
             startActivity(intent);
         });
         return view;
